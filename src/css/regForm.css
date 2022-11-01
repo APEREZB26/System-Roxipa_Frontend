@@ -1,4 +1,4 @@
-body{
+/*body{
     --opacidad-negro: 0.7;
     background-image: linear-gradient(rgba(255, 255, 255, var(--opacidad-negro)), rgba(255, 255, 255, var(--opacidad-negro))), url("../assets/background.jpg");
 }
@@ -48,4 +48,4 @@ body{
     background-color: #FFD809;
     border: 2px solid rgba(0, 0, 0, 0.342);
     border-radius: 10px;
-}
+}*/

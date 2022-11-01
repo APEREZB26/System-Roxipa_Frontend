@@ -1,0 +1,74 @@
+body{
+    --opacidad-negro: 0.7;
+    font-size: 15px;
+    color: #b5b5b5;
+    --color-plomo: #b5b5b5;
+    --color-rojo: #ed1c24;
+    background-image: linear-gradient(rgba(255, 255, 255, var(--opacidad-negro)), rgba(255, 255, 255, var(--opacidad-negro))), url("../assets/background.jpg");
+}
+
+.bodyLog{
+    display: flex;
+    height: 120vh;
+    justify-content: flex-end;
+}
+.formBox{
+    display: flex;
+    width: 70vh;
+    margin-right: 10%;
+    padding: 80px 0 0 0;
+    flex-direction: column;
+    background-color: #fff;
+}
+.formTitle{
+    margin: 0 0 20px 50px; 
+}
+.title{
+    margin: 0 50px 30px 50px;
+}
+.formTitle p{
+    font-size: 30px;
+    font-weight:lighter;
+    color: black;
+}
+
+.formContent{
+    width: 56vh;
+    margin-left: 50px;
+}
+
+.formContent form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formContent form input{
+    margin: 10px 0 10px 0;
+    padding-left: 20px;
+    color: var(--color-plomo);
+    border-radius: 7px;
+    border: 1px solid var(--color-plomo);
+    outline: none;
+    width: 53vh;
+    height: 40px;
+}
+
+.formContent form input[type="submit"]{
+    margin-top: 25px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--color-rojo);
+    color: #fff;
+}
+.formContent p a{
+    color: rgb(255, 0, 0);
+}
+form div{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-plomo);
+    height: 20px;
+}

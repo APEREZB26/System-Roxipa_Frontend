@@ -5,8 +5,8 @@
 }
 
 .frito{
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 80px;
+  position: sticky;
+  bottom: 30px;
+  left: 30px;
+  width: 25vh;
 }
