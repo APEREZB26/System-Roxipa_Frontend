@@ -12,8 +12,21 @@
 
 .header div{
     font-size: 14px;
+    display: flex;
 }
 
 .header div img{
     height: 40px;
+    margin-right: 25px;
+}
+
+.header div ul{
+    display: flex;
+    list-style: none;
+}
+
+.header div ul li{
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }

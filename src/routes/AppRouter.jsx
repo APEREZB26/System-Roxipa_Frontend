@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import fritolay from "../assets/fritolay.png"; // Evitar usar esto
 import { Login, Register } from "../views/auth";
+import { Homepage } from "../views/Homepage";
 
 export function AppRouter() {
   return (
@@ -10,8 +10,8 @@ export function AppRouter() {
         <Route path="/" />
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/homepage" element={<Homepage/>}/>
       </Routes>
-      <img src={fritolay} alt="fritolay" className="frito"></img>
     </BrowserRouter>
   );
 }
