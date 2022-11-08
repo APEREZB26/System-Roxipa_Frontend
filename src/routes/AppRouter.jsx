@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Login, Register } from "../views/auth";
 import { Homepage } from "../views/Homepage";
+import { Product } from "../views/Product";
 
 export function AppRouter() {
   return (
@@ -11,6 +12,7 @@ export function AppRouter() {
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/homepage" element={<Homepage/>}/>
+        <Route path="/product" element={<Product/>}/>
       </Routes>
     </BrowserRouter>
   );

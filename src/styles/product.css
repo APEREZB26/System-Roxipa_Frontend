@@ -1,0 +1,148 @@
+.product_Body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.sliderp{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 20%;
+    margin-top: 130px;
+    padding: 40px;
+    border-radius: 20px;
+}
+.slider-title{
+    width: 160px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    font-size: 26px;
+}
+.slider-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 150px;
+    overflow: hidden;
+}
+.slider-content li{
+    width: 40vh;
+    height: 150px;
+    list-style: none;
+    border-radius: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.sliderp li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+.slider-content li img:hover{
+    width: 130%;
+    margin-left: -50px;
+    z-index: 99;
+}
+.slider-subtitle{
+    width: auto;
+    position:absolute;
+    margin: 60px 0 0 70px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffff;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 20%;
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 20px;
+}
+.category-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+}
+.category-content li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vh;
+    height: auto;
+    list-style: none;
+    border-radius: 20px;
+    margin: 0 20px 20px 0;
+    overflow: hidden;
+}
+.category-content li:hover{
+    background-color: #F2F2F2;
+}
+.category li img{
+    width: 33vh;
+    height: 220px;
+    margin: 10px 0;
+}
+.category-subtitle{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 16px;
+    color: rgb(7, 7, 7);
+}
+.wrapperp{
+    display: flex;
+    width: 85%;
+    margin: 50px 0 50px 0;
+    color: black;
+    font-size: 14px;
+}
+
+.inform{
+
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    width: auto;
+}
+
+.inform .inform-content1 img{
+    width: 60%;
+    margin: -20px 0 20px 0;
+}
+
+.inform-content1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 55%;
+}
+.inform-content1 p{
+    margin: 0 20px;
+}
+.inform-content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42%;
+    padding: 20px;
+    border-left: 1px solid rgba(51, 51, 51, 0.2);
+}
+.inform-content2 h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.inform-content2 p{
+    font-size: 13px;
+}
