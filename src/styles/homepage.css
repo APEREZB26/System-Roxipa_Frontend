@@ -4,35 +4,89 @@
     flex-direction: column;
     align-items: center;
 }
-
+p a:link, p a:visited, p a:active {
+    text-decoration:underline;
+    color: rgb(3, 58, 236);
+}
 .slider{
     background-color: white;
     width: 80%;
     height: 20%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
     padding: 40px;
     border-radius: 20px;
 }
 
 .slider li{
+    width: 35vh;
+    height: 240px;
     list-style: none;
+    border-radius: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.slider li:hover{
+    background-color: var(--color-selection);
+}
 .slider li img{
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
-
+.previous{
+    width: 5%;
+    height: 220px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next{
+    width: 5%;
+    height: 220px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.previous:hover{
+    background-color: var(--color-selection);
+}
+.next:hover{
+    background-color: var(--color-selection);
+}
+.content-circle{
+    width: 20%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.content-circle div{
+    width: 7%;
+    height: 42%;
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: #ffffff;
+}
+.content-circle div:hover{
+    background-color: var(--color-selection);
+}
 .wrapper{
     display: flex;
-    grid-template-columns: repeat(2, 1fr);
     width: 85%;
-    gap: 5vw;
-    margin-top: 20px;
+    gap: 2vw;
     color: black;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin: 20px 0 50px 0;
 }
 
 .info{
@@ -40,48 +94,44 @@
     border-radius: 15px;
     padding: 20px;
     display: flex;
-    width: 95%;
+    width: 90%;
 }
 
 .info .sec1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-right: 1px solid rgba(51, 51, 51, 0.2);
     margin-right: 25px;
+    width: 150%;
+    padding: 70px 0;
 }
-
+.info .sec1 p{
+    margin: 30px 40px;
+}
 .info .sec1 img{
     width: 80%;
-}
-
-.sec1{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
 }
 
 .sec2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
-
+.sec2 p{
+    padding-bottom: 20px;
+}
+h2{
+    margin: 20px 0;
+}
 #root > div > div.wrapper > div.info > div.sec2 > p:nth-child(2){
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-    padding-bottom: 10px;
-}
-
-#root > div > div.wrapper > div.info > div.sec2 > h2:nth-child(3){
-    margin-top: 10px;
 }
 
 .fritolay_info{
     background-color: white;
     border-radius: 15px;
-    width: 35%;
+    width: 30%;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -97,19 +147,29 @@
 }
 
 .fritolay_info div p{
-    margin-bottom: 10px;
+    margin: 20px;
+    text-align:center;
+    padding-top: 20PX;
+    border-top: 1px solid rgba(51, 51, 51, 0.2);;
 }
 
 .fritolay_info div img{
-    width: 100%;
-    margin-bottom: 5px;
+    width: 70%;
+    margin: 30px 0 10px 0;
 }
 
-.fritolay_info div button{
+.fritolay_info a{
     background-color: #339E59;
     border: none;
     padding: 10px;
     color: white;
     border-radius: 50px;
     width: 50%;
+    text-align: center;
+}
+
+.fritolay_info a:hover{
+    background-color: #339E59;
+    box-shadow: 0 0 10px #ded7d7,
+    0 0 40px #ded7d7;
 }

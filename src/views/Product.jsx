@@ -1,8 +1,6 @@
 import { Headerhome } from "../components/ui/Headerhome";
 import "../styles/product.css";
-import lays from "../assets/lays-natural.png";
-import pepsico from "../assets/PepsiCo.png";
-import background from "../assets/background.jpg";
+const imgs = require.context('../assets',true);
 
 export const Product = () => {
   return (
@@ -15,21 +13,24 @@ export const Product = () => {
         <div className="slider-content">
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={background} alt="img" />
+            <img src={imgs('./background.jpg')} alt="img" />Pequeño
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={background} alt="img" />
+            <img src={imgs('./background.jpg')} alt="img" />
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={background} alt="img" />
+            <img src={imgs('./background.jpg')} alt="img" />
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={background} alt="img" />
+            <img src={imgs('./background.jpg')} alt="img" />
           </li>
         </div>
+      </div>
+      <div className="content-circle">
+        <div></div><div></div><div></div><div></div>
       </div>
       <div class="category">
         <div className="slider-title">
@@ -37,42 +38,19 @@ export const Product = () => {
         </div>
         <div className="category-content">
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-        </div>
-      </div>
-      <div class="category">
-        <div className="slider-title">
-          Pequeño:
-        </div>
-        <div className="category-content">
-          <li>
-            <img src={lays} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={lays} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={lays} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
         </div>
@@ -83,19 +61,42 @@ export const Product = () => {
         </div>
         <div className="category-content">
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
           <li>
-            <img src={lays} alt="img" />
+            <img src={imgs('./lays-natural.png')} alt="img" />
+            <div className="category-subtitle">Lays Clasica - 160g</div>
+          </li>
+        </div>
+      </div>
+      <div class="category">
+        <div className="slider-title">
+          Pequeño:
+        </div>
+        <div className="category-content">
+          <li>
+            <img src={imgs('./lays-natural.png')} alt="img" />
+            <div className="category-subtitle">Lays Clasica - 160g</div>
+          </li>
+          <li>
+            <img src={imgs('./lays-natural.png')} alt="img" />
+            <div className="category-subtitle">Lays Clasica - 160g</div>
+          </li>
+          <li>
+            <img src={imgs('./lays-natural.png')} alt="img" />
+            <div className="category-subtitle">Lays Clasica - 160g</div>
+          </li>
+          <li>
+            <img src={imgs('./lays-natural.png')} alt="img" />
             <div className="category-subtitle">Lays Clasica - 160g</div>
           </li>
         </div>
@@ -103,7 +104,7 @@ export const Product = () => {
       <div className="wrapperp">
         <div className="inform">
           <div className="inform-content1">
-            <img src={pepsico} alt="img" />
+            <img src={imgs('./PepsiCo.png')} alt="img" />
             <p>
             Una de nuestras alianzas más importantes es con la empresa PepsiCo con la cual llevamos trabajando más de 50 años.
             </p>
