@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login, Register } from "../views/auth";
 import { Homepage } from "../views/Homepage";
 import { ListProduct } from "../views/ListProduct";
+import { ListClient } from "../views/ListClient";
 import { Product } from "../views/Product";
 
 export function AppRouter() {
@@ -15,6 +16,7 @@ export function AppRouter() {
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/admin/listProduct" element={<ListProduct/>}/>
+        <Route path="/admin/listClient" element={<ListClient/>}/>
       </Routes>
     </BrowserRouter>
   );

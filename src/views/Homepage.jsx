@@ -1,4 +1,4 @@
-import { Headerhome } from "../components/ui/Headerhome";
+import { HeaderClient } from "../components/ui/HeaderClient";
 import { Link } from "react-router-dom";
 import "../styles/homepage.css";
 
@@ -7,7 +7,7 @@ const imgs = require.context('../assets',true);
 export const Homepage = () => {
   return (
     <div className="homepage_Body">
-      <Headerhome/>
+      <HeaderClient/>
       <div class="slider">
         <div className="previous">
           <img src={imgs('./icon-previous.svg')} alt="img" />

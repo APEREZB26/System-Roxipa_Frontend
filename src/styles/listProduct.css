@@ -9,20 +9,22 @@
 .listContent{
     background: white;
     border-radius: 20px;
-    width: 80vw;
+    width: 80%;
     height: max-content;
-    margin-top: 100px;
+    margin-top: 130px;
     padding: 30px;
 }
-
+.listContent h2{
+    margin: 20px 0 0 4%;
+}
 .tableContent{
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid rgba(51, 51, 51, 0.1);
+    width: 90%;
+    border-collapse:collapse;
+    margin: 3% 4%;
 }
 
 .tableContent tr{
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    border-bottom: .5px solid rgba(51, 51, 51, 0.2);
 }
 
 .tableContent > tr:nth-child(1) > th:nth-child(1),
@@ -32,27 +34,43 @@
 .tableContent > tr:nth-child(1) > th:nth-child(5),
 .tableContent > tr:nth-child(1) > th:nth-child(6){
     background-color: rgba(51, 51, 51, 0.1);
+    padding: 15px 10px;
 }
-
+.tableContent > tr:nth-child(1) > th:nth-child(1){
+    border-top-left-radius: 7px;
+}
+.tableContent > tr:nth-child(1) > th:nth-child(6){
+    border-top-right-radius: 7px;
+}
+.tableContent > tr:last-child > th:nth-child(1){
+    border-bottom-left-radius: 7px;
+}
+.tableContent > tr:last-child > th:nth-child(1){
+    border-bottom-right-radius: 7px;
+}
 .tableContent tr th{
     padding: 10px;
 }
-
-.editButton{
+th button{
+    width: 35%;
     border: none;
-    padding: 7px;
-    background-color: #92C9DB;
+    padding: 10px 7px;
     color: white;
     border-radius: 10px;
-    margin: 5px;
     cursor:pointer;
+}
+.editButton{
+    background-color: #92C9DB;
+    margin: 5px;
 }
 
 .deleteButton{
-    border: none;
-    padding: 7px;
     background-color: rgb(255, 58, 91);
-    color: white;
-    border-radius: 10px;
-    cursor:pointer;
+}
+.editButton:hover{
+    background-color: #90bdcc;
+}
+
+.deleteButton:hover{
+    background-color: rgb(221, 50, 79);
 }

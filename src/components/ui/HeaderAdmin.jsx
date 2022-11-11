@@ -1,8 +1,8 @@
-import "../../styles/header_home.css";
+import "../../styles/header.css";
 import { Link } from "react-router-dom";
 const imgs = require.context('../../assets',true);
 
-export const Headerhome = () => {
+export const HeaderAdmin = () => {
   return (
     <header className="header">
       <div className="content-header">
@@ -10,18 +10,17 @@ export const Headerhome = () => {
           <img src={imgs('./icon-menu.svg')} alt="fritolay"/>
         </div>
         <ul>
-            <Link to="/homepage">
-            <li>Home</li>
-            </Link>
-            <Link to="/product">
+            <Link to="/admin/listProduct">
             <li>Productos</li>
             </Link>
-            <li>Carrito</li>
+            <Link to="/admin/listClient">
+            <li>Clientes</li>
+            </Link>
         </ul>
         <div className="content-profile">
           <Link to="/auth/login">
             <div className="profile">
-              <p>Iniciar sesión</p>
+              <p>Kenneth Hernan 💪</p>
             </div>
           </Link>
         </div>

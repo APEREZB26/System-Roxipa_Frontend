@@ -1,11 +1,12 @@
-import { Headerhome } from "../components/ui/Headerhome";
+import { HeaderClient } from "../components/ui/HeaderClient";
 import "../styles/product.css";
+
 const imgs = require.context('../assets',true);
 
 export const Product = () => {
   return (
     <div className="product_Body">
-      <Headerhome/>
+      <HeaderClient/>
       <div class="sliderp">
         <div className="slider-title">
           Categorías:
