@@ -1,113 +1,76 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { HeaderClient } from "../components/ui/HeaderClient";
 import "../styles/product.css";
 
-const imgs = require.context('../assets',true);
+const imgs = require.context("../assets", true);
 
 export const Product = () => {
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const url = "http://localhost:3000/api/product/get-products";
+      const result = await axios.get(url);
+
+      setProduct(result.data.products);
+    };
+    getProducts();
+  }, []);
+
   return (
     <div className="product_Body">
-      <HeaderClient/>
-      <div class="sliderp">
-        <div className="slider-title">
-          Categorías:
-        </div>
+      <HeaderClient />
+      <div className="sliderp">
+        <div className="slider-title">Categorías:</div>
         <div className="slider-content">
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={imgs('./background.jpg')} alt="img" />Pequeño
+            <img src={imgs("./background.jpg")} alt="img" />
+            Pequeño
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={imgs('./background.jpg')} alt="img" />
+            <img src={imgs("./background.jpg")} alt="img" />
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={imgs('./background.jpg')} alt="img" />
+            <img src={imgs("./background.jpg")} alt="img" />
           </li>
           <li>
             <div className="slider-subtitle">Pequeño</div>
-            <img src={imgs('./background.jpg')} alt="img" />
+            <img src={imgs("./background.jpg")} alt="img" />
           </li>
         </div>
       </div>
+
       <div className="content-circle">
-        <div></div><div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <div class="category">
-        <div className="slider-title">
-          Pequeño:
-        </div>
+      <div className="category">
+        <div className="slider-title">Pequeño:</div>
         <div className="category-content">
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-        </div>
-      </div>
-      <div class="category">
-        <div className="slider-title">
-          Pequeño:
-        </div>
-        <div className="category-content">
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-        </div>
-      </div>
-      <div class="category">
-        <div className="slider-title">
-          Pequeño:
-        </div>
-        <div className="category-content">
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
-          <li>
-            <img src={imgs('./lays-natural.png')} alt="img" />
-            <div className="category-subtitle">Lays Clasica - 160g</div>
-          </li>
+          {product.map((productos) => {
+            return (
+              <li key={productos.id}>
+                <img src={imgs("./lays-natural.png")} alt="img" />
+                <div className="category-subtitle">{productos.name}</div>
+                <div className="category-subtitle"><strong>Precio:</strong> {productos.price}</div>
+              </li>
+            );
+          })}
         </div>
       </div>
       <div className="wrapperp">
         <div className="inform">
           <div className="inform-content1">
-            <img src={imgs('./PepsiCo.png')} alt="img" />
+            <img src={imgs("./PepsiCo.png")} alt="img" />
             <p>
-            Una de nuestras alianzas más importantes es con la empresa PepsiCo con la cual llevamos trabajando más de 50 años.
+              Una de nuestras alianzas más importantes es con la empresa PepsiCo
+              con la cual llevamos trabajando más de 50 años.
             </p>
           </div>
           <div className="inform-content2">

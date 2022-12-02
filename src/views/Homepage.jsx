@@ -8,7 +8,7 @@ export const Homepage = () => {
   return (
     <div className="homepage_Body">
       <HeaderClient/>
-      <div class="slider">
+      <div className="slider">
         <div className="previous">
           <img src={imgs('./icon-previous.svg')} alt="img" />
         </div>
@@ -39,7 +39,7 @@ export const Homepage = () => {
               Una de nuestras alianzas mas importantes es con la empresa PepsiCo
               con la cual llevamos trabajando mas de 50 años. 
               <br/><br/>
-              <a target="_blank" href="https://www.pepsico.es/sobre-nosotros/misi%C3%B3n-y-visi%C3%B3n">
+              <a target="_blank" href="https://www.pepsico.es/sobre-nosotros/misi%C3%B3n-y-visi%C3%B3n" rel="noreferrer">
                  Mas información...
               </a>
             </p>
