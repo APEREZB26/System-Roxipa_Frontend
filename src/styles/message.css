@@ -1,0 +1,61 @@
+.messageBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.messageContent{
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+}
+
+.messageTitle{
+    background-color: red;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    color: white;
+    padding: 5px 0px;
+}
+
+.messageContent p{
+    color: black;
+    padding: 20px;
+}
+
+.messageButtons{
+    display: flex;
+    width: 100%;
+}
+
+.messageButtons a{ 
+    border: none;
+    color: white;
+    background: red;
+    width: 100%;
+    padding: 7px;
+}
+
+.messageButtons button{
+    border: none;
+    color: white;
+    background: transparent;
+    width: 100%;
+    padding: 7px;
+}
+
+.messageButtons a:hover{
+    background: rgb(255, 96, 96);
+    cursor: pointer;
+}
+
+.messageButtons a:nth-child(1){
+    border-radius: 0px 0px 0px 15px;
+}
+
+.messageButtons a:nth-child(2){
+    border-radius: 0px 0px 15px 0px;
+}
