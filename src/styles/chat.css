@@ -1,0 +1,98 @@
+.chatButton{
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+    bottom: 10px;
+    background-color: #F5F5F5;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+}
+
+.chatContainer{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.chatContainer.active{
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    right: 10px;
+    bottom: 10px;
+    width: 450px;
+    height: 500px;
+    background: #F5F5F5;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatHeader{
+    display: flex;
+    background-color: white;
+    line-height: 60px;
+    border-radius: 20px 20px 20% 20%;
+    color: black;
+    font-weight: bold;
+}
+
+.chatHeader .exit{
+    border: none;
+    background: none;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+}
+
+.chatBody{
+    width: 100%;
+    height: 360px;
+    overflow-y: scroll;
+}
+
+.chatBody li{
+    list-style: none;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background: white;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 2px solid #cecece;
+    color: black;
+}
+
+.chatFooter{
+    background: white;
+    height: 80px;
+    border-radius: 20% 20% 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.chatFooter input{
+    width: 350px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #F5F5F5;
+    border-radius: 20% 20% 20px 20px;
+    border-bottom: 2px solid #cecece;
+}
+
+.chatFooter .send{
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    margin-left: 10px;
+    border-radius: 50px;
+    background: #F5F5F5;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

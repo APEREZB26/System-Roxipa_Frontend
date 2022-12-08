@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes,Navigate } from "react-router-dom";
 
 import { Login, Register } from "../views/auth";
 import { Homepage } from "../views/Homepage";
 import { ListProduct } from "../views/ListProduct";
 import { ListClient } from "../views/ListClient";
 import { Product } from "../views/Product";
-import { Message } from "../components/ui/Message";
 
 export function AppRouter() {
 
@@ -13,7 +12,7 @@ export function AppRouter() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Message/>}/>
+          <Route path="/" element={<> <Navigate to="/auth/login" /> </>}/>
           <Route path="/auth/register" element={<Register />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/homepage" element={<Homepage />} />
