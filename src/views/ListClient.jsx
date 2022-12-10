@@ -16,7 +16,7 @@ export const ListClient = () => {
       setClient(result.data.clients);
     };
     getClients()
-  })
+  },[])
     return (
       <div className="listBody">
         <HeaderAdmin />
