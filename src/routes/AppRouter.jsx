@@ -5,6 +5,7 @@ import { Homepage } from "../views/Homepage";
 import { ListProduct } from "../views/ListProduct";
 import { ListClient } from "../views/ListClient";
 import { Product } from "../views/Product";
+import { EditProduct } from "../views/EditProduct";
 
 export function AppRouter() {
 
@@ -19,6 +20,7 @@ export function AppRouter() {
           <Route path="/product" element={<Product />} />
           <Route path="/admin/listProduct" element={<ListProduct />} />
           <Route path="/admin/listClient" element={<ListClient />} />
+          <Route path="/admin/editProduct/:id" element={<EditProduct />} />
         </Routes>
       </BrowserRouter>
     </div>

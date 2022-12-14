@@ -2,13 +2,25 @@ import { HeaderClient } from "../components/ui/HeaderClient";
 import { Link } from "react-router-dom";
 import "../styles/homepage.css";
 import { Chat } from "../components/ui/chat";
+import { useAuth } from "../hooks/useAuth";
+import { HeaderAdmin } from "../components/ui/HeaderAdmin";
 
 const imgs = require.context("../assets", true);
 
 export const Homepage = () => {
+  const { user } = useAuth();
+
+  const heading = () =>{
+    if(user.role === "Client"){
+      return <HeaderClient/>
+    }else{
+      return <HeaderAdmin/>
+    }
+  }
+
   return (
     <div className="homepage_Body">
-      <HeaderClient />
+      {heading()}
       <div className="slider">
         <div className="previous">
           <img src={imgs("./icon-previous.svg")} alt="img" />

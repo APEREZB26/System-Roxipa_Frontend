@@ -2,10 +2,12 @@ import { HeaderAdmin } from "../components/ui/HeaderAdmin";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "../styles/listProduct.css";
+import { useNavigate } from "react-router-dom";
 
 const imgs = require.context("../assets", true);
 
 export const ListProduct = () => {
+  const navigate = useNavigate
   const [product, setProduct] = useState([]);
 
   useEffect(() => {

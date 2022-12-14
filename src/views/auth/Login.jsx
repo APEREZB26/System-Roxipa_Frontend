@@ -4,37 +4,31 @@ import { useAuth } from "../../hooks/useAuth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const infoDataLogin = {
+  email:"",
+  password:"",
+}
+
 export const Login = () => {
-  //eslint-disable-next-line
   const navigate  = useNavigate();
-  const [dataUser, setDataUser] = useState([]);
+  const [dataLogin, setDataLogin] = useState(infoDataLogin);
   const { login } = useAuth();
 
-  const onLogin = async (e) => {
-    const user = await login(dataUser);
-    const userName = document.querySelector(
-      "#root > div > div > div > div > div.formContent > form > input[type=text]:nth-child(1)"
-    );
+  const onLogin = async(e)=>{
+    e.preventDefault()
+    const {hasError, client} = await login(dataLogin)
+    console.log(dataLogin)
 
-    userName.addEventListener("change", (e) => {
-      const result = user.find((usuario) => usuario.user.email === e.target.value);
+    if(hasError){
+      return 
+    }
 
-      console.log(result)
-
-      if (!result) {
-        return console.log("error")
-      } else {
-        try {
-          if (user && result.user.role === "Client") {
-            console.log('HOME client')
-            navigate("/homepage")
-          }
-        } catch (error) {
-          navigate("/admin/listProduct")
-        }
-      }
-    });
-  };
+    if(client.user.role === "Client"){
+        navigate("/homepage")
+    }else{
+      navigate("/admin/listProduct")
+    }
+  }
 
   return (
     <div>
@@ -50,14 +44,18 @@ export const Login = () => {
           <div className="formContent">
             <form onSubmit={onLogin}>
               Nombre / DNI
-              <input type="text" />
+              <input type="text" id="usuario" onChange={(e)=>{
+                  setDataLogin({...dataLogin , email: e.target.value})
+              }}/>
               Contraseña
-              <input type="password" />
+              <input type="password"  id="contraseña" onChange={(e)=>{
+                setDataLogin({...dataLogin , password: e.target.value})
+              }}/>
               <input type="submit" value="Iniciar sesión" />
               <div>
                 <p>
-                  ¿No tienes cuenta? <button type="button" onClick={onLogin}> probar</button>
-                  {/*<Link to="/auth/register"> Únete</Link>*/}
+                  ¿No tienes cuenta?
+                  <Link to="/auth/register"> Únete</Link>
                 </p>
               </div>
             </form>

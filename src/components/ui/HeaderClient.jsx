@@ -1,8 +1,12 @@
 import "../../styles/header.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 const imgs = require.context('../../assets',true);
 
 export const HeaderClient = () => {
+  const { user } = useAuth();
+
+  console.log(user)
   return (
     <header className="header">
       <div className="content-header">
@@ -21,7 +25,7 @@ export const HeaderClient = () => {
         <div className="content-profile">
           <Link to="/auth/login">
             <div className="profile">
-              <p>Iniciar sesión</p>
+              <p>{user.fullname}</p>
             </div>
           </Link>
         </div>

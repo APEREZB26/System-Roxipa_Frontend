@@ -6,14 +6,14 @@ import "../styles/product.css";
 const imgs = require.context("../assets", true);
 
 export const Product = () => {
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
       const url = "http://localhost:3000/api/product/get-products";
       const result = await axios.get(url);
 
-      setProduct(result.data.products);
+      setProducts(result.data.products);
     };
     getProducts();
   }, []);
@@ -53,12 +53,12 @@ export const Product = () => {
       <div className="category">
         <div className="slider-title">Pequeño:</div>
         <div className="category-content">
-          {product.map((productos) => {
+          {products.map((product) => {
             return (
-              <li key={productos.id}>
-                <img src={imgs("./lays-natural.png")} alt="img" />
-                <div className="category-subtitle">{productos.name}</div>
-                <div className="category-subtitle"><strong>Precio:</strong> {productos.price}</div>
+              <li key={product.id}>
+                <img src={product?.url} alt="img" />
+                <div className="category-subtitle">{product.name}</div>
+                <div className="category-subtitle"><strong>Precio:</strong> {product.price}</div>
               </li>
             );
           })}
