@@ -11,7 +11,7 @@ export const Homepage = () => {
   const { user } = useAuth();
 
   const heading = () =>{
-    if(user.role === "Client"){
+    if(user.user.role === "Client"){
       return <HeaderClient/>
     }else{
       return <HeaderAdmin/>
